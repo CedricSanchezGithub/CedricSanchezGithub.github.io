@@ -1,0 +1,87 @@
+/*
+ * Une seule feuille pour tout le site. Pas de générateur, pas de build : une
+ * erreur dans une page ne peut pas empêcher les autres d'être servies, et les
+ * URLs légales des apps restent en ligne quoi qu'il arrive ailleurs.
+ */
+
+:root {
+    color-scheme: light dark;
+    --fond: #ffffff;
+    --texte: #1a1a1a;
+    --attenue: #5c5c5c;
+    --trait: #e2e2e2;
+    --lien: #1b6b45;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fond: #14161a;
+        --texte: #e8e8e8;
+        --attenue: #a0a0a0;
+        --trait: #2b2f36;
+        --lien: #6fce9f;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+    max-width: 42rem;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+h1 {
+    margin: 0 0 0.25rem;
+    font-size: 1.9rem;
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 2.5rem 0 0.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--trait);
+    font-size: 1.2rem;
+}
+
+.date,
+.sous-titre {
+    margin: 0 0 2rem;
+    color: var(--attenue);
+    font-size: 0.95rem;
+}
+
+.resume {
+    margin: 2rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--lien);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--lien);
+}
+
+footer {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--trait);
+    color: var(--attenue);
+    font-size: 0.9rem;
+}
